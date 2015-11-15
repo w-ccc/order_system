@@ -1,0 +1,258 @@
+<!doctype html>
+<html class="no-js">
+  <head>
+    <meta charset="UTF-8">
+    <title>客流量统计-柱状图</title>
+
+    <!--IE Compatibility modes-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!--Mobile first-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css">
+
+    <!-- Metis core stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/daterangepicker.css" />
+
+    <!-- metisMenu stylesheet -->
+    <link rel="stylesheet" href="css/metisMenu.min.css">
+    <link rel="stylesheet" href="css/dataTables.bootstrap.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:http:// -->
+
+    <!--[if lt IE 9]>
+      <script src="assets/lib/html5shiv/html5shiv.js"></script>
+      <script src="assets/lib/respond/respond.min.js"></script>
+      <![endif]-->
+
+    <!--For Development Only. Not required -->
+
+    <link rel="stylesheet" href="css/style-switcher.css">
+    <script src="js/less.min.js"></script>
+
+    <!--Modernizr-->
+    <script src="js/modernizr.min.js"></script>
+  </head>
+  <body class="  " style="background-color:#2E2E2E;font-family:微软雅黑;">
+    <div class="bg-dark dk" id="wrap">
+      <div id="top">
+
+        <!-- .navbar -->
+        <nav class="navbar navbar-inverse navbar-static-top">
+          <div class="container-fluid">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <header class="navbar-header">
+                <img src="img/logo.png" alt="">
+            </header>
+
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+              <!-- .nav -->
+              <ul class="nav navbar-nav">
+                <li class=""> <a href="show_bill.html">今日结账单</a>  </li>
+                <li class=""><a href="show_customer_line.html">本月客流量</a> </li>
+                <li> <a href="show_sale_line.html">本月销售额</a>  </li>
+                <li class=""><a href="change_menu.html">修改菜单</a> </li>
+              </ul><!-- /.nav -->
+            </div>
+          </div><!-- /.container-fluid -->
+        </nav><!-- /.navbar -->
+        
+      </div><!-- /#top -->
+      <div id="left">
+        <div class="media user-media bg-dark dker">
+          <div class="user-wrapper bg-dark">
+            <a class="user-link" href="">
+              <img class="media-object img-thumbnail user-img" alt="User Picture" src="img/user.jpg">
+            </a> 
+            <div class="media-body">
+            <br/>
+              <h5 class="media-heading">YaJia</h5>
+              <ul class="list-unstyled user-info">
+                <li> <a href="">Manager</a>  </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- #menu -->
+        <ul id="menu" class="bg-blue dker">
+          <li class="nav-header">Menu</li>
+          <li class="nav-divider"></li>
+          <li class="">
+            <a href="show_bill.html">
+              <i class="fa fa-file-text"></i>
+              <span class="link-title">查看结账单</span> 
+            </a> 
+          </li>
+          <li class="active">
+            <a href="show_customer_line.html">
+              <i class="fa fa-male "></i>
+              <span class="link-title">客流量统计</span> 
+              <span class="fa arrow"></span> 
+            </a> 
+            <ul>
+              <li>
+                <a href="show_customer_line.html">
+                  <i class="fa fa-angle-right"></i>&nbsp; 折线图 </a> 
+              </li>
+              <li>
+                <a href="show_customer_bar.html">
+                  <i class="fa fa-angle-right"></i>&nbsp; 柱状图 </a> 
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="show_dish.html">
+              <i class="fa fa-sort-amount-desc"></i>
+              <span class="link-title">菜销量统计</span>
+            </a>
+          </li>
+          <li class="">
+            <a href="show_sale_line.html">
+              <i class="fa fa-cny"></i>
+              <span class="link-title">销售额统计</span> 
+              <span class="fa arrow"></span> 
+            </a> 
+            <ul>
+              <li>
+                <a href="show_sale_line.html">
+                  <i class="fa fa-angle-right"></i>&nbsp; 折线图 </a> 
+              </li>
+              <li>
+                <a href="show_sale_bar.html">
+                  <i class="fa fa-angle-right"></i>&nbsp; 柱状图 </a> 
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="show_comment.html">
+              <i class="fa fa-comments"></i>
+              <span class="link-title">查看评价</span> 
+            </a> 
+          </li>
+          <li class="nav-divider"></li>
+          <li class="">
+            <a href="change_menu.html">
+              <i class="fa fa-pencil-square-o"></i>
+              <span class="link-title">菜单管理</span> 
+              <span class="fa arrow"></span> 
+            </a> 
+            <ul>
+              <li>
+                <a href="change_menu.html">
+                  <i class="fa fa-angle-right"></i>&nbsp; 修改菜单 </a> 
+              </li>
+              <li>
+                <a href="change_discount.html">
+                  <i class="fa fa-angle-right"></i>&nbsp; 修改菜品折扣 </a> 
+              </li>
+              <li>
+                <a href="change_set_meal.html">
+                  <i class="fa fa-angle-right"></i>&nbsp; 修改套餐 </a> 
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a href="add_waiter.html">
+              <i class="fa fa-gear"></i>
+              <span class="link-title">其他设置</span> 
+              <span class="fa arrow"></span> 
+            </a> 
+            <ul>
+              <li>
+                <a href="add_waiter.html">
+                  <i class="fa fa-angle-right"></i>&nbsp; 添加服务员 </a> 
+              </li>
+              <li>
+                <a href="setting_word.html">
+                  <i class="fa fa-angle-right"></i>&nbsp; 修改热搜词 </a> 
+              </li>
+            </ul>
+          </li>
+        </ul><!-- /#menu -->
+      </div><!-- /#left -->
+      <div id="content">
+        <header class="head">
+          <div class="main-bar">
+            <h3>
+              <i class="fa fa-bar-chart"></i>&nbsp; 客流量柱状图</h3>
+          </div><!-- /.main-bar -->
+        </header><!-- /.head -->
+        <div class="outer">
+          <div class="inner bg-light lter">
+          <br/>
+            <div class="row">
+                  <div class="col-lg-2"></div>
+                  <label class="control-label col-lg-1" for="reportrange">按时间查找</label>
+                  <div class='col-lg-2' style='position: relative;'>
+                    <input id="config-demo" class="form-control" type="text" style="width:220px;"/>
+                    <i class="glyphicon glyphicon-calendar fa fa-calendar" style="bottom: 28px; right: -195px; top: auto; cursor: pointer;"></i>
+                  </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="box">
+                  <header>
+                    <h5>柱状图</h5>
+                  </header>
+                  <div class="body" id="trigo" style="height: 380px;"></div>
+                </div>
+              </div>
+            </div>
+            
+            
+          </div><!-- /.inner -->
+        </div><!-- /.outer -->
+      </div><!-- /#content --> 
+    </div><!-- /#wrap -->
+    <footer class="Footer bg-dark dker">
+      <p>2015 &copy; ccc</p>
+    </footer><!-- /#footer -->
+    
+
+    <!--jQuery -->
+    <script src="js/moment.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/jquery.dataTables.min.js"></script>
+    <script src="js/dataTables.bootstrap.js"></script>
+    <script src="js/jquery.tablesorter.min.js"></script>
+    <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/daterangepicker.js"></script>
+    <script src="js/jquery.flot.min.js"></script>
+    <script src="js/jquery.flot.selection.min.js"></script>
+    <script src="js/jquery.flot.resize.min.js"></script>
+
+    <!--Bootstrap -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- MetisMenu -->
+    <script src="js/metisMenu.min.js"></script>
+
+    <!-- Screenfull -->
+    <script src="js/screenfull.min.js"></script>
+
+    <!-- Metis core scripts -->
+    <script src="js/core.min.js"></script>
+
+    <!-- Metis demo scripts -->
+    <script src="js/app.js"></script>
+    <script src="js/show_customer_bar.js"></script>
+    <script>
+      $(function() {
+        Metis.dashboard();
+        Metis.formGeneral();
+      });
+    </script>
+    
+  </body>
