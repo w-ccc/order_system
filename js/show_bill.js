@@ -67,7 +67,8 @@ var dataPlugin =
         '</div> ';
 $(document).ready(function() {
     $('#myDataTable').dataTable( {
-        "dom": '<"toolbar">'
+        "dom": '<"toolbar">',
+        //"pagingType": "full_numbers"
     } );
     $("div.toolbar").html("<div class='row'>"+dataPlugin+col1_fil+
                     "</div><div class='row'>"+col2_fil+col3_fil+"</div>");
