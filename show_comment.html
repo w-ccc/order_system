@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="UTF-8">
-    <title>修改菜单</title>
+    <title>查看评价</title>
 
     <!--IE Compatibility modes-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -18,6 +18,7 @@
 
     <!-- Metis core stylesheet -->
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/daterangepicker.css" />
 
     <!-- metisMenu stylesheet -->
     <link rel="stylesheet" href="css/metisMenu.min.css">
@@ -60,7 +61,7 @@
                 <li class=""> <a href="show_bill.html">今日结账单</a>  </li>
                 <li class=""><a href="show_customer_line.html">本月客流量</a> </li>
                 <li> <a href="show_sale_line.html">本月销售额</a>  </li>
-                <li class="active"><a href="change_menu.html">修改菜单</a> </li>
+                <li class=""><a href="change_menu.html">修改菜单</a> </li>
               </ul><!-- /.nav -->
             </div>
           </div><!-- /.container-fluid -->
@@ -133,14 +134,14 @@
               </li>
             </ul>
           </li>
-          <li class="">
+          <li class="active">
             <a href="show_comment.html">
               <i class="fa fa-comments"></i>
               <span class="link-title">查看评价</span> 
             </a> 
           </li>
           <li class="nav-divider"></li>
-          <li class="active">
+          <li class="">
             <a href="change_menu.html">
               <i class="fa fa-pencil-square-o"></i>
               <span class="link-title">菜单管理</span> 
@@ -184,12 +185,13 @@
         <header class="head">
           <div class="main-bar">
             <h3>
-              <i class="fa fa-pencil-square-o"></i>&nbsp; 修改菜单</h3>
+              <i class="fa fa-file-text"></i>&nbsp; 查看评价</h3>
           </div><!-- /.main-bar -->
         </header><!-- /.head -->
         <div class="outer">
           <div class="inner bg-light lter">
           
+            <!--Begin Datatables-->
             <div class="row">
               <div class="col-lg-12">
                 <div class="box">
@@ -197,27 +199,28 @@
                     <div class="icons">
                       <i class="fa fa-table"></i>
                     </div>
-                    <h5>菜单</h5>
+                    <h5>评价列表</h5>
                   </header>
                   <div id="collapse4" class="body">
-                    <table id="menu_table" class="table table-bordered table-condensed table-hover table-striped ">
+                    <table id="myDataTable" class="table table-bordered table-condensed table-hover table-striped ">
+                      <br/>
                       <thead>
                         <tr>
-                          <th>类别</th>
                           <th>菜名</th>
-                          <th>销量</th>
-                          <th>售价</th>
                           <th>评星</th>
-                          <th><a href="">添加新菜</a></th>
+                          <th>售价</th>
+                          <th></th>
                         </tr>
                       </thead>
-                      <tbody id="menu_list">
+                      <tbody id="comment_list">
                       </tbody>
                     </table>
                   </div>
                 </div>
               </div>
-            </div>
+            </div><!-- /.row -->
+
+            <!--End Datatables-->
             
           </div><!-- /.inner -->
         </div><!-- /.outer -->
@@ -226,16 +229,17 @@
     <footer class="Footer bg-dark dker">
       <p>2015 &copy; ccc</p>
     </footer><!-- /#footer -->
-    
-    
+   
 
     <!--jQuery -->
+    <script src="js/moment.js"></script>
     <script src="js/jquery.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/jquery.dataTables.min.js"></script>
     <script src="js/dataTables.bootstrap.js"></script>
     <script src="js/jquery.tablesorter.min.js"></script>
     <script src="js/jquery.ui.touch-punch.min.js"></script>
+    <script src="js/daterangepicker.js"></script>
 
     <!--Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
@@ -251,11 +255,12 @@
 
     <!-- Metis demo scripts -->
     <script src="js/app.js"></script>
+    <script src="js/show_comment.js"></script>
     <script>
       $(function() {
         Metis.MetisTable();
         Metis.metisSortable();
       });
     </script>
-    <script src="js/change_menu.js"></script>
+    
   </body>

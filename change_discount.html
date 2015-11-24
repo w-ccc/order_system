@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="UTF-8">
-    <title>修改菜单</title>
+    <title>修改菜品折扣</title>
 
     <!--IE Compatibility modes-->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -60,7 +60,7 @@
                 <li class=""> <a href="show_bill.html">今日结账单</a>  </li>
                 <li class=""><a href="show_customer_line.html">本月客流量</a> </li>
                 <li> <a href="show_sale_line.html">本月销售额</a>  </li>
-                <li class="active"><a href="change_menu.html">修改菜单</a> </li>
+                <li class=""><a href="change_menu.html">修改菜单</a> </li>
               </ul><!-- /.nav -->
             </div>
           </div><!-- /.container-fluid -->
@@ -184,7 +184,7 @@
         <header class="head">
           <div class="main-bar">
             <h3>
-              <i class="fa fa-pencil-square-o"></i>&nbsp; 修改菜单</h3>
+              <i class="fa fa-pencil-square-o"></i>&nbsp; 修改菜品折扣</h3>
           </div><!-- /.main-bar -->
         </header><!-- /.head -->
         <div class="outer">
@@ -197,7 +197,7 @@
                     <div class="icons">
                       <i class="fa fa-table"></i>
                     </div>
-                    <h5>菜单</h5>
+                    <h5>折扣列表</h5>
                   </header>
                   <div id="collapse4" class="body">
                     <table id="menu_table" class="table table-bordered table-condensed table-hover table-striped ">
@@ -205,10 +205,10 @@
                         <tr>
                           <th>类别</th>
                           <th>菜名</th>
-                          <th>销量</th>
-                          <th>售价</th>
+                          <th>原价</th>
+                          <th>折扣后价格</th>
                           <th>评星</th>
-                          <th><a href="">添加新菜</a></th>
+                          <th></th>
                         </tr>
                       </thead>
                       <tbody id="menu_list">
@@ -257,5 +257,5 @@
         Metis.metisSortable();
       });
     </script>
-    <script src="js/change_menu.js"></script>
+    <script src="js/change_discount.js"></script>
   </body>
